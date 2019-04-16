@@ -1,0 +1,84 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Calculadora de Churrasco</title>
+
+<style type="text/css">
+<!--
+
+
+form fieldset {
+   float: center;
+   margin: 12px auto 12px auto;
+   width: 30%;
+   border: solid black 1px;
+   padding: 3%;
+   margin-bottom: 12px;
+}
+
+form legend {
+   padding: 10px;
+   margin: 10px;
+   border: solid black 1px;
+   font-size: 90%;
+   font-weight: bold;
+   background-color: #e8e8e8;
+}
+
+form label {
+   display: block;
+   font-size: 16px;
+}
+
+form input {
+   width: 80%;
+   border: solid #ccc 2px;
+   font-size: 12px;
+   margin-bottom: 12px;
+}
+
+form input.botao {
+   display: block;
+   width: auto;
+   float: right;
+
+}
+-->
+</style>
+
+<script type="text/javascript">
+
+function calcular( ) {
+   var valor1 = document.calcform.valor1.value;
+   var valor2 = document.calcform.valor2.value;
+
+   
+      var res = (valor1 * 500) + (valor2 * 400);
+      document.calcform.res.value = res + ' gramas de carne';
+}
+
+</script>
+
+</head>
+<body>
+
+<form name="calcform" method="post" action="">
+   <fieldset>
+      <legend>Calculadora de Churrasco</legend>
+
+      <label for="valor1">Digite a quantidade de <strong>Homens</strong>:</label> 
+      <input type="text" name="valor1" id="valor1" />
+
+      <label for="valor2">Digite a quantidade de  <strong>Mulheres</strong>:</label> 
+      <input type="text" name="valor2" id="valor2" />
+
+      <label for="res">Resultado:</label>
+      <input type="text" name="res" id="res" />
+
+      <input type="button" value="Calcular" class="botao" onclick="calcular()"/>
+   </fieldset>
+</form>
+
+</body>
+</html>
